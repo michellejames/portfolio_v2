@@ -24,7 +24,7 @@
 			<div class="hamburger-menu">
 				  <div class="bar"></div>	
 			</div>
-			<div class="square-name contact-name">&lt; Contact /&gt;</div>
+			<div class="portfolio-piece-name">&lt; Stranger Things Website /&gt;</div>
 			<div class="nav">
 				<a class="nav-link anim-destination" href="index.html">
 					<span data-hover="Home">Home</span>
@@ -37,20 +37,6 @@
 				</a>
 				<a class="nav-link anim-destination" href="contact.html">
 					<span data-hover="Contact">Contact</span>
-				</a>
-			</div>
-			<div class="desktop-nav">
-				<a class="nav-link anim-destination" href="contact.html">
-					<span data-hover="Contact">Contact</span>
-				</a>
-				<a class="nav-link anim-destination" href="about.html">
-					<span data-hover="About">About</span>
-				</a>
-				<a class="nav-link anim-destination" href="work.html">
-					<span data-hover="Work">Work</span>
-				</a>
-				<a class="nav-link anim-destination" href="index.html">
-					<span data-hover="Home">Home</span>
 				</a>
 			</div>
 			<div class="project-nav">
@@ -81,31 +67,30 @@
 			</div>
 		</div>
 
-		<div class="square-content contact-content contact-square">
-
-			<h2 class="call-to-action">Have a question or want to work together? Let's make it happen!</h2>
-			<form action="form_to_email.php" method="post" class="contact-form" name="contact-form">
-				<input type="text" name="honeypot">
-				<div class="name-email">
-					<div class="label name-label">
-	  			        <label for="name">Name</label>
-	  			        <input type="text" id="name" name="user_name" placeholder="Your Name">
-	  			    </div>
-	  			    <div class="label email-label">
-	  			        <label for="mail">E-Mail</label>
-	  			        <input type="email" id="mail" name="user_email" placeholder="Enter E-Mail">
-	  			    </div>
+		<div class="square-content work-content work-piece">
+			<div class="overlay">
+				<div class="portfolio-piece stranger-things">
+					<a href="#">
+						<span>BStranger Things Website</span>
+					</a>
 				</div>
-  			    <div class="label message-label">
-  			        <label for="msg">Message</label>
-  			        <textarea id="msg" name="user_message" placeholder="Your Message"></textarea>
-  			    </div>
-  			    <button class="form-button anim-destination" href="index.html" onclick="clearInputFields();">
-  			    	<span data-hover="Send">Send</span>
-  			    </button>
-  			    <h3 class="thank-you-php">Thank you for reaching out. I'll be in touch soon!</h3>
-			</form>
-
+				<div class="overlay-text">
+					<div class="text">
+						<h2 class="text-title">Stranger Things Website</h2>
+						<p class="text-description">Teaser website for the season two premiere of Netflix Original Show Stranger Things. It guides the user through the key moments in the first episode and features hidden trailer videos.</p>
+						<div class="text-technology">
+							<h2>Technology used:</h2>
+							<ul class="technology-array">
+								<li>Responsive CSS</li>
+								<li>Vanilla JS</li>
+								<li>Greensock TweenMax</li>
+								<li>jQuery</li>
+							</ul>
+						</div>
+						<a class="link text-link anim-destination" href="#"><span data-hover="Let's go!">Visit Site</span></a>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<footer>
@@ -122,8 +107,6 @@
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
-		<script src="src/js/contact-form.js"></script>
 		<!-- <script src="dist/js/main.js"></script> -->
 		<script src="src/js/app.js"></script>
 

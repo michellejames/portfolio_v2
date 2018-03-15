@@ -1,8 +1,8 @@
 .logo-white {
-	background-image: url(../img/logo_white.svg);
+	background-image: url(../img/white_logo.svg);
 	background-repeat: no-repeat;
-	width: 40vw;
-	height: 20vh;
+	width: 25vw;
+	height: 14vh;
 	top: 15px;
 	left: 10px;
 	position: fixed;
@@ -14,7 +14,8 @@
 	}
 
 	@media screen and (min-width: 900px) {
-		// position: absolute;
+		width: 40vw;
+		height: 20vh;
 	}
 }
 
@@ -28,7 +29,8 @@
 		margin-bottom: 35vh;
 		@media screen and (min-width: 600px) {
 			display: none;
-	} }
+		} 
+	}
 
 	@media screen and (min-width: 600px) {
 		transform: translateY(-40px);
@@ -45,8 +47,6 @@
 	@media screen and (min-width: 1500px) {
 		transform: rotate(5deg) translateX(-80px) translateY(-100px);
 	}
-
-
 
 	.blue-square {
 		width: 2000px;
@@ -104,21 +104,26 @@
 		position: absolute;
 		transform-origin: bottom right;
 		transform: rotate(-12deg);
-		top: 99px;
+		top: 98px;
 		right: 94px;
 		padding: 10px;
+		padding-right: 15px;
 		width: 2000px;
 		text-align: right;
 		position: fixed;
 
 		@media screen and (min-width: 900px) {
-			top: 163px;
+			top: 165px;
 			right: 141px;
 		}
 	}
 
 	.work-name {
 		background: $turquoise;
+	}
+
+	.about-name {
+		background: $pink;
 	}
 
 	.contact-name {
@@ -149,5 +154,150 @@
 			right: 141px;
 		}
 
+	}
+
+	.desktop-nav {
+		display: none;
+
+		@media screen and (min-width: 600px) {
+			display: flex;
+			flex-direction: column;
+			font-family: 'Poppins', sans-serif;
+			font-size: 1rem;
+			position: absolute;
+			transform-origin: bottom left;
+			transform: rotate(-12deg);
+			top: 100px;
+			right: -12px;
+
+			.nav-link {
+				color: $white;
+				font-size: 1rem;
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				margin-bottom: 10%;
+				font-weight: 500;
+			}
+
+			.nav-link.anim-destination {
+				display: inline-block;
+				overflow: hidden;
+				font-size: 1rem;
+			}
+
+			.nav-link.anim-destination span {
+				position: relative;
+				display: inline-block;
+				-webkit-transition: -webkit-transform 0.3s;
+				transition: transform 0.3s;
+				padding: 2px;
+				transistion: .4s all;
+			}
+
+			.nav-link.anim-destination span::before {
+				position: absolute;
+				white-space: nowrap;	
+				top: 100%;
+				content: attr(data-hover);
+				font-weight: 500;
+				padding: 2px;
+			}
+
+			.nav-link.anim-destination:hover span,
+			.nav-link.anim-destination:focus span {
+				-webkit-transform: translateY(-100%);
+				transform: translateY(-100%);
+				color: $blue;
+			}
+
+			.work-link.anim-destination:hover span,
+			.work-link.anim-destination:focus span > {
+				
+				.project-nav{
+					display: flex;
+					opacity: 1;
+					transform: rotate(-12deg) translateX(5%) translateX(0%);
+				}
+			}
+		}
+
+		@media screen and (min-width: 900px) {
+			top: 167px;
+			right: -7px;
+
+			.nav-link,
+			.nav-link.anim-destination {
+				font-size: 1.5rem;
+				margin-bottom: 10%;
+			}
+
+		}
+	}
+
+	.project-nav {
+		display: none;
+	// transition: all 0.2s linear;
+		@media screen and (min-width: 600px) {
+			flex-direction: column;
+			align-items: flex-end;
+			font-family: 'Poppins', sans-serif;
+			position: absolute;
+			transform-origin: bottom left;
+			transform: rotate(-12deg) translateX(5%) translateX(-30%);
+			top: 198px;
+			right: 50px;
+
+			.nav-link {
+				color: $blue;
+				font-size: .8rem;
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				margin-bottom: 2%;
+				font-weight: 500;
+			}
+
+			.nav-link.anim-destination {
+				display: inline-block;
+				overflow: hidden;
+				font-size: .8rem;
+			}
+
+			.nav-link.anim-destination span {
+				position: relative;
+				display: inline-block;
+				-webkit-transition: -webkit-transform 0.3s;
+				transition: transform 0.3s;
+				padding: 0.5px;
+			}
+
+			.nav-link.anim-destination span::before {
+				position: absolute;
+				white-space: nowrap;	
+				top: 100%;
+				content: attr(data-hover);
+				font-weight: 500;
+				padding: 2.5px;
+			}
+
+			.nav-link.anim-destination:hover span,
+			.nav-link.anim-destination:focus span {
+				-webkit-transform: translateY(-100%);
+				transform: translateY(-100%);
+				color: $blue;
+			}
+		}
+
+		@media screen and (min-width: 900px) {
+			top: 280px;
+			right: 84.5px;
+
+			.nav-link,
+			.nav-link.anim-destination {
+				font-size: 1rem;
+			}
+
+		}
 	}
 }

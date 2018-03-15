@@ -1,64 +1,9 @@
-/* 
-==============================================
-CONTENT:	Project Name Here
-AUTHOR:		Your Name Here
-==============================================
-
-TABLE OF CONTENTS:
-
-1. Main Layout
-2. Content
-
-==============================================
-*/
-
-@font-face {
-  font-family: 'Adam Hand Writing Test';
-  src: url('../fonts/adamhandwritingtest.ttf')  format('truetype');
-}
-
 $lightpink: #FFACDB;
 $white: #fff;
 $pink: #D31682;
 $blue: #151E46;
 $turquoise: #45C1C0;
 $lightpurple: #585F7B;
-
-@import 'reset';
-@import 'hamburger-menu';
-@import 'nav-bar';
-@import 'header';
-@import 'footer';
-
-@import 'work';
-@import 'contact';
-@import 'about';
-
-@import 'cheesemonger';
-// @import 'daily-digits';
-
-
-/* 1. Main Layout ================================= */
-
-* {
-	box-sizing: border-box;
-}
-
-[name="honeypot"] {
-	display: none;
-}
-
-body {
-	background-image: url(../img/dust.png);
-	width: 100%;
-	height: 100%;
-	position: absolute;
-
-	&#homepage { 
-		@media screen and (min-width: 600px) {
-			overflow: hidden;
-	} }
-}
 
 @keyframes bounce {
 	0%, 100%, 20%, 50%, 80% {
@@ -78,23 +23,45 @@ body {
 	}
 }
 
-.logo-white {
-	background-image: url(../img/white_logo.svg);
-	background-repeat: no-repeat;
-	width: 40vw;
-	height: 20vh;
-	top: 15px;
-	left: 10px;
-	position: fixed;
-	z-index: 3;
-	animation-duration: 1s;
-	animation-fill-mode: both;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+@import 'reset';
+@import 'nav-bar';
+@import 'hamburger-menu';
+@import 'header';
+@import 'footer';
 
-	&:hover {
-		animation-name: bounce;
-	}
+@import 'work';
+@import 'contact';
+@import 'about';
+
+@import 'portfolio-pieces';
+
+
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+[name="honeypot"] {
+	display: none;
+}
+
+body {
+	background-image: url(../img/dust.png);
+	width: 100%;
+	height: 100%;
+	max-width: 1280px;
+	position: absolute;
+
+	&#homepage { 
+		@media screen and (min-width: 600px) {
+			overflow: hidden;
+
+			.desktop-nav {
+				display: none;
+			}
+	} }
 }
 
 .logo-desktop {
@@ -163,27 +130,29 @@ body {
 		font-family: 'Poppins', sans-serif;
 		font-size: 2rem;
 		padding: 3% 5%;
-
-		a {
-			text-decoration: none;
-			color: $white;
-			animation-duration: 1s;
-			animation-fill-mode: both;
-			animation-timing-function: ease-in-out;
-			animation-iteration-count: infinite;
-
-			&:hover {
-				animation-name: bounce;
-			}
-		}
+		display: none;
 
 		@media screen and (min-width: 600px) {
+			display: flex;
 			width: 49.25%;
 			height: 49.25vh;
 			margin: 0.5%;
 			font-size: 1rem;
 			padding: 20px;
 			transform: rotateY(3deg);
+
+			a {
+				text-decoration: none;
+				color: $white;
+				animation-duration: 1s;
+				animation-fill-mode: both;
+				animation-timing-function: ease-in-out;
+				animation-iteration-count: infinite;
+
+				&:hover {
+					animation-name: bounce;
+				}
+			}
 		}
 	}
 
@@ -194,7 +163,7 @@ body {
 		background: transparent;
 		margin-right: 0.25%;
 		margin-bottom: 0.25vh;
-		margin-top: 35vh;
+		margin-top: 10vh;
 
 		@media screen and (min-width: 600px) {
 			margin-top: 0;
@@ -220,29 +189,39 @@ body {
 	}
 
 	.square2 {
-		background: $turquoise;
-		display: flex;
-		flex-direction: column-reverse;
-		margin-left: 0.25%;
-		margin-bottom: 0.5vh;
+		display: none;
+
+		@media screen and (min-width: 600px) {
+			background: $turquoise;
+			display: flex;
+			flex-direction: column-reverse;
+			margin-left: 0.25%;
+			margin-bottom: 0.5vh;
+		}
 	}
 
 	.square3 {
-		background: $pink;
-		display: flex;
-		flex-direction: row;
-		margin-right: 0.25%;
-		margin-top: 0.25vh;
+		display: none;
 
 		@media screen and (min-width: 600px) {
+			display: flex;
+			background: $pink;
+			display: flex;
 			flex-direction: row-reverse;
+			margin-right: 0.25%;
+			margin-top: 0.25vh;
 		}
 	}
 
 	.square4 {
-		background: $blue;
-		margin-left: 0.25%;
-		margin-top: 0.25vh;
+		display: none;
+
+		@media screen and (min-width: 600px) {
+			display: flex; 
+			background: $blue;
+			margin-left: 0.25%;
+			margin-top: 0.25vh;
+		}
 	}
 
 	//// Individual Content for Squares
@@ -261,30 +240,38 @@ body {
 		}
 	}
 
-	.logo-content {
-		 // background: linear-gradient(to bottom right, #fff, #45C1C0, #D31682, #151E46);	
-	}
-
 	.work-content {
 		position: relative;
 
-		.background {
+		.index-work-name {
+			color: #fff;
+			font-size: 2rem;
+			font-family: 'Poppins', sans-serif;
 			position: absolute;
-			width: 100%;
-			height: 100%;
-			background-image: url(../img/dust.png);
-			// background-repeat: no-repeat;
-			// background-size: cover;
-			// background: $turquoise;
-			 // background: linear-gradient(to bottom right, #fff, #45C1C0, #D31682, #151E46);	
-			// opacity: .5;
+			transform-origin: bottom right;
+			transform: rotate(-12deg);
+			top: -72px;
+			right: -254px;
+			padding: 10px;
+			padding-right: 360px;
+			width: 2000px;
+			text-align: right;
+			position: fixed;
+			background: $turquoise;
+			position: absolute;
+
+			@media screen and (min-width: 600px) {
+				display: none;
+			}
 		}
+
+
 
 		.portfolio {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			// perspective: 1000px;
+			margin-top: 5vh;
 
 			a {
 				text-decoration: none;
@@ -435,6 +422,31 @@ body {
 	}
 
 	.about-content {
+		position: relative;
+
+		.index-about-name {
+			color: #fff;
+			font-size: 2rem;
+			font-family: 'Poppins', sans-serif;
+			position: absolute;
+			transform-origin: bottom right;
+			transform: rotate(-12deg);
+			top: -90px;
+			right: -254px;
+			padding: 10px;
+			padding-right: 360px;
+			width: 2000px;
+			text-align: right;
+			position: fixed;
+			background: $pink;
+			position: absolute;
+
+			@media screen and (min-width: 600px) {
+				display: none;
+			}
+		}
+
+
 		color: $blue;
 		font-family: 'Poppins', sans-serif;
 
@@ -446,6 +458,7 @@ body {
 			width: 100%;
 			height: 30vh;
 			margin-bottom: 10vh;
+		    margin-top: 14vh;
 			box-shadow: 0px 2px 33px 10px rgba(204,204,204,1);
 		}
 
@@ -455,18 +468,44 @@ body {
 			margin-bottom: 5vh;
 		}
 
-		.facts {
-
-		}
-
 		p {
 			margin-bottom: 3vh;
+
+			span {
+				color: $pink;
+				font-weight: bold;
+			}
 		}
 
+		.bio {
+			padding: 0 5%;
+		}
 	}
 
 	.contact-content {
+		position: relative;
 
+		.index-contact-name {
+			color: #fff;
+			font-size: 2rem;
+			font-family: 'Poppins', sans-serif;
+			position: absolute;
+			transform-origin: bottom right;
+			transform: rotate(-12deg);
+			top: -122px;
+			right: -254px;
+			padding: 10px;
+			padding-right: 360px;
+			width: 2000px;
+			text-align: right;
+			position: fixed;
+			background: $blue;
+			position: absolute;
+
+			@media screen and (min-width: 600px) {
+				display: none;
+			}
+		}
 	}
 }
 

@@ -30,25 +30,6 @@ $lightpurple: #585F7B;
 	}
 }
 
-.logo-white {
-	background-image: url(../img/white_logo.svg);
-	background-repeat: no-repeat;
-	width: 40vw;
-	height: 20vh;
-	top: 15px;
-	left: 10px;
-	position: fixed;
-	z-index: 3;
-	animation-duration: 1s;
-	animation-fill-mode: both;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-
-	&:hover {
-		animation-name: bounce;
-	}
-}
-
 .work-title {
 	display: flex;
 	background: $turquoise;
@@ -74,7 +55,6 @@ $lightpurple: #585F7B;
 			padding: 15px;
 			text-decoration: none;
 		}
-
 	}
 }
 
@@ -83,7 +63,6 @@ $lightpurple: #585F7B;
 	flex-direction: column;
 	align-items: center;
 	font-family: 'Noto Serif', serif;
-	// background: $white;
 	line-height: 25px;
 }
 
@@ -97,9 +76,6 @@ $lightpurple: #585F7B;
 	left: 50%;
 	transform: translateX(-50%);
 
-	// @media screen and (min-width: 600px) {
-	// 	margin-top: 35vh;
-	// }
 
 	.portfolio {
 		display: flex;
@@ -122,6 +98,11 @@ $lightpurple: #585F7B;
 	    height: 300px;
 	    margin: 70px auto;
 	    perspective: 1000px;
+	    // transform: rotate(-12deg);
+
+    	// @media screen and (min-width: 900px) {
+     //    	transform: rotate(-7deg);
+    	// }
 	}
 
 	.thumb a {
@@ -144,7 +125,7 @@ $lightpurple: #585F7B;
 
 	.anatomy-slider a {
 	    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-		url("../img/anatomy-slider2.png");
+		url("../img/anatomy-slider1.png");
 		background-size: 0, cover;
 		background-position: center;
 	    transform-style: preserve-3d;
@@ -194,6 +175,10 @@ $lightpurple: #585F7B;
 	    background-position: 45% -15px;
 	    transform-style: preserve-3d;
 	    transition: all 0.5s;
+
+	    @media screen and (min-width: 600px) {
+	    	background-position: 45% -40px;
+	    }
 	}
 
 	.marta-redesign a {

@@ -6,8 +6,8 @@ $bar-spacing: 12px;
 .hamburger-menu {
 	position: absolute;
 	z-index: 10;
-	top: 20px;
-	right: 30px;
+	top: 45px;
+	right: 40px;
 	margin: auto;
 	width: $bar-width;
 	height: $bar-height + $bar-spacing*2;
@@ -29,6 +29,7 @@ $bar-spacing: 12px;
 	position: relative;
 	transform: translateY($bar-spacing);
 	background: $white;
+	transform: rotate(-12deg);
 	transition: all 0ms 300ms;
 
 	&.animate {
