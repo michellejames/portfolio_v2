@@ -1,0 +1,153 @@
+.logo-white {
+	background-image: url(../img/logo_white.svg);
+	background-repeat: no-repeat;
+	width: 40vw;
+	height: 20vh;
+	top: 15px;
+	left: 10px;
+	position: fixed;
+	z-index: 3;
+	transition: .2s all;
+
+	&:hover {
+		top: 10px;
+	}
+
+	@media screen and (min-width: 900px) {
+		// position: absolute;
+	}
+}
+
+.header {
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	height: 30vh;
+
+	#homepage & { 
+		margin-bottom: 35vh;
+		@media screen and (min-width: 600px) {
+			display: none;
+	} }
+
+	@media screen and (min-width: 600px) {
+		transform: translateY(-40px);
+	}
+
+	@media screen and (min-width: 900px) {
+		transform: translateY(-100px) translateX(10px);
+	}
+
+	@media screen and (min-width: 1200px) {
+		transform: rotate(5deg) translateY(-100px);
+	}
+
+	@media screen and (min-width: 1500px) {
+		transform: rotate(5deg) translateX(-80px) translateY(-100px);
+	}
+
+
+
+	.blue-square {
+		width: 2000px;
+		height: 600px;
+		background: $blue;
+		position: absolute;
+		transform-origin: bottom right;
+		transform: rotate(-12deg);
+		top: -507px;
+		right: 104px;
+
+		@media screen and (min-width: 900px) {
+			top: -444px;
+			right: 152px;
+		}
+	}
+
+	.turquoise-square {
+		width: 200px;
+		height: 200px;
+		background: $turquoise;
+		position: absolute;
+		transform: rotate(-12deg);
+		top: -130px;
+		right: -80px;
+
+		@media screen and (min-width: 900px) {
+			width: 400px;
+			height: 600px;
+			top: -480px;
+			right: -189px;
+		}
+	}
+
+	.pink-square {
+		width: 200px;
+		height: 800px;
+		background: $pink;
+		position: absolute;
+		transform: rotate(-12deg);
+		top: 67px;
+		right: -184px;
+
+		@media screen and (min-width: 900px) {
+			width: 800px;
+			height: 2000px;
+			top: 59px;
+		    right: -857px;
+		}
+	}
+	.square-name {
+		color: $white;
+		font-size: 2rem;
+		font-family: 'Poppins', sans-serif;
+		position: absolute;
+		transform-origin: bottom right;
+		transform: rotate(-12deg);
+		top: 99px;
+		right: 94px;
+		padding: 10px;
+		width: 2000px;
+		text-align: right;
+		position: fixed;
+
+		@media screen and (min-width: 900px) {
+			top: 163px;
+			right: 141px;
+		}
+	}
+
+	.work-name {
+		background: $turquoise;
+	}
+
+	.contact-name {
+		background: $blue;
+	}
+
+	.portfolio-piece-name {
+		background: $turquoise;
+		color: $white;
+		font-size: 1rem;
+		font-family: 'Poppins', sans-serif;
+		position: absolute;
+		transform-origin: bottom right;
+		transform: rotate(-12deg);
+		top: 99px;
+		right: 94px;
+		padding: 10px;
+		width: 2000px;
+		text-align: right;
+		position: fixed;
+
+		@media screen and (min-width: 600px) {
+			font-size: 2rem;
+		}
+
+		@media screen and (min-width: 900px) {
+			top: 163px;
+			right: 141px;
+		}
+
+	}
+}
