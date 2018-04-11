@@ -9,7 +9,7 @@
 .overlay {
 	// margin-top: 30vh;
 	position: relative;
-	width: 100%;
+	// width: 100%;
 	z-index: 5;
 	display: flex;
 	flex-direction: column;
@@ -115,12 +115,21 @@
 			.text-description {
 				font-size: 1rem;
 				line-height: 1.3rem;
-				margin-bottom: 10%;
+				margin-bottom: 5%;
 
 				@media screen and (min-width: 600px) {
 					font-size: 1.2rem;
 					line-height: 1.4rem;
 					margin-bottom: 5%;
+				}
+			}
+
+			.copyright-designer {
+				margin-bottom: 5%;
+
+				& a {
+					color: $pink;
+					text-decoration: none;
 				}
 			}
 

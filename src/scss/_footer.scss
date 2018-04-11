@@ -60,6 +60,15 @@ footer {
 		color: $white;
 		font-family: 'Poppins', sans-serif;
 		font-size: .8rem;
+
+		span {
+			color: $pink;
+		}
+
+		.credit {
+			text-decoration: none;
+			color: $pink;
+		}
 	}
 }
 
