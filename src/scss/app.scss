@@ -1,39 +1,43 @@
-$lightpink: #FFACDB;
+$lightpink: #ffacdb;
 $white: #fff;
-$pink: #D31682;
-$blue: #151E46;
-$turquoise: #45C1C0;
-$lightpurple: #585F7B;
+$pink: #d31682;
+$blue: #151e46;
+$turquoise: #45c1c0;
+$lightpurple: #585f7b;
 
 @keyframes bounce {
-	0%, 100%, 20%, 50%, 80% {
+	0%,
+	100%,
+	20%,
+	50%,
+	80% {
 		-webkit-transform: translateY(0);
-		-ms-transform:     translateY(0);
-		transform:         translateY(0)
+		-ms-transform: translateY(0);
+		transform: translateY(0);
 	}
 	40% {
 		-webkit-transform: translateY(-5px);
-		-ms-transform:     translateY(-5px);
-		transform:         translateY(-5px)
+		-ms-transform: translateY(-5px);
+		transform: translateY(-5px);
 	}
 	60% {
 		-webkit-transform: translateY(-2px);
-		-ms-transform:     translateY(-2px);
-		transform:         translateY(-2px)
+		-ms-transform: translateY(-2px);
+		transform: translateY(-2px);
 	}
 }
 
-@import 'reset';
-@import 'nav-bar';
-@import 'hamburger-menu';
-@import 'header';
-@import 'footer';
+@import "reset";
+@import "nav-bar";
+@import "hamburger-menu";
+@import "header";
+@import "footer";
 
-@import 'work';
-@import 'contact';
-@import 'about';
+@import "work";
+@import "contact";
+@import "about";
 
-@import 'portfolio-pieces';
+@import "portfolio-pieces";
 
 /* 1. Main Layout ================================= */
 
@@ -47,19 +51,20 @@ $lightpurple: #585F7B;
 
 body {
 	// background-image: url(../img/dust.png);
+
 	background: #fff;
 	width: 100%;
 	height: 100%;
 	position: absolute;
-
-	&#homepage { 
+	&#homepage {
 		@media screen and (min-width: 600px) {
 			overflow: hidden;
 
 			.desktop-nav {
 				display: none;
 			}
-	} }
+		}
+	}
 }
 
 .logo-desktop {
@@ -96,26 +101,30 @@ body {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		transform: rotate(-30deg)scale(2);
+		transform: rotate(-30deg) scale(2);
 		overflow: hidden;
 		left: 0;
 	}
 
 	@keyframes bounce {
-		0%, 100%, 20%, 50%, 80% {
+		0%,
+		100%,
+		20%,
+		50%,
+		80% {
 			-webkit-transform: translateY(0);
-			-ms-transform:     translateY(0);
-			transform:         translateY(0)
+			-ms-transform: translateY(0);
+			transform: translateY(0);
 		}
 		40% {
 			-webkit-transform: translateY(-5px);
-			-ms-transform:     translateY(-5px);
-			transform:         translateY(-5px)
+			-ms-transform: translateY(-5px);
+			transform: translateY(-5px);
 		}
 		60% {
 			-webkit-transform: translateY(-2px);
-			-ms-transform:     translateY(-2px);
-			transform:         translateY(-2px)
+			-ms-transform: translateY(-2px);
+			transform: translateY(-2px);
 		}
 	}
 
@@ -125,7 +134,7 @@ body {
 		flex-direction: column;
 		background: lightblue;
 		color: $white;
-		font-family: 'Poppins', sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 2rem;
 		padding: 3% 5%;
 		display: none;
@@ -175,7 +184,7 @@ body {
 
 				a {
 					color: $blue;
-					transition: .2s;
+					transition: 0.2s;
 					margin: 0 10px;
 
 					&:hover {
@@ -215,7 +224,7 @@ body {
 		display: none;
 
 		@media screen and (min-width: 600px) {
-			display: flex; 
+			display: flex;
 			background: $blue;
 			margin-left: 0.25%;
 			margin-top: 0.25vh;
@@ -228,7 +237,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		font-family: 'Noto Serif', serif;
+		font-family: "Noto Serif", serif;
 		// background: $white;
 		line-height: 25px;
 		padding: 5%;
@@ -244,7 +253,7 @@ body {
 		.index-work-name {
 			color: #fff;
 			font-size: 2rem;
-			font-family: 'Poppins', sans-serif;
+			font-family: "Poppins", sans-serif;
 			position: absolute;
 			transform-origin: bottom right;
 			transform: rotate(-12deg);
@@ -263,8 +272,6 @@ body {
 			}
 		}
 
-
-
 		.portfolio {
 			display: flex;
 			flex-direction: column;
@@ -277,154 +284,152 @@ body {
 		}
 
 		.thumb {
-		    width: 300px;
-		    height: 300px;
-		    margin: 70px auto;
-		    perspective: 1000px;
+			width: 300px;
+			height: 300px;
+			margin: 70px auto;
+			perspective: 1000px;
 		}
 
 		.thumb a {
-		    display: block;
-		    width: 100%;
-		    height: 100%;
-		    background-size: 0, cover;
-		    transform-style: preserve-3d;
-		    transition: all 0.5s;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-size: 0, cover;
+			transform-style: preserve-3d;
+			transition: all 0.5s;
 		}
 
 		.cheesemonger a {
-		    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-			url("../img/image_cheesemonger.png");
+			background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+				url("../img/image_cheesemonger.png");
 			background-size: 0, cover;
 			background-position: center;
-		    transform-style: preserve-3d;
-		    transition: all 0.5s;
+			transform-style: preserve-3d;
+			transition: all 0.5s;
 		}
 
 		.anatomy-slider a {
-		    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-			url("../img/anatomy-slider2.png");
+			background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+				url("../img/anatomy-slider2.png");
 			background-size: 0, cover;
 			background-position: center;
-		    transform-style: preserve-3d;
-		    transition: all 0.5s;
+			transform-style: preserve-3d;
+			transition: all 0.5s;
 		}
 
 		.giphy-battle a {
-		    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-			url("../img/giphy-battle.png");
+			background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+				url("../img/giphy-battle.png");
 			background-size: 0, cover;
 			background-position: center;
-		    transform-style: preserve-3d;
-		    transition: all 0.5s;
+			transform-style: preserve-3d;
+			transition: all 0.5s;
 		}
 
 		.daily-digits a {
-		    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-			url("../img/image_daily_digits.png");
+			background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+				url("../img/image_daily_digits.png");
 			background-size: 0, cover;
-		    background-position: 66% 1px;
-		    transform-style: preserve-3d;
-		    transition: all 0.5s;
+			background-position: 66% 1px;
+			transform-style: preserve-3d;
+			transition: all 0.5s;
 		}
 
 		.mercedes-benz a {
-		    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-			url("../img/mercedes-benz.png");
+			background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+				url("../img/mercedes-benz.png");
 			background-size: 0, cover;
 			background-position: center;
-		    transform-style: preserve-3d;
-		    transition: all 0.5s;
+			transform-style: preserve-3d;
+			transition: all 0.5s;
 		}
 
 		.red-socks a {
-		    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-			url("../img/red-socks.png");
+			background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+				url("../img/red-socks.png");
 			background-size: 0, cover;
 			background-position: center;
-		    transform-style: preserve-3d;
-		    transition: all 0.5s;
+			transform-style: preserve-3d;
+			transition: all 0.5s;
 		}
 
 		.stranger-things a {
-		    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-			url("../img/stranger-things.png");
+			background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+				url("../img/stranger-things.png");
 			background-size: 0, cover;
-		    background-position: 45% -15px;
-		    transform-style: preserve-3d;
-		    transition: all 0.5s;
+			background-position: 45% -15px;
+			transform-style: preserve-3d;
+			transition: all 0.5s;
 		}
 
 		.marta-redesign a {
-		    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-			url("../img/marta-redesign2.png");
+			background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+				url("../img/marta-redesign2.png");
 			background-size: 0, cover;
 			background-position: center;
-		    transform-style: preserve-3d;
-		    transition: all 0.5s;
+			transform-style: preserve-3d;
+			transition: all 0.5s;
 		}
 
 		.furniture-world a {
-		    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-			url("../img/furniture-world2.png");
+			background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+				url("../img/furniture-world2.png");
 			background-size: 0, cover;
 			background-position: center;
-		    transform-style: preserve-3d;
-		    transition: all 0.5s;
+			transform-style: preserve-3d;
+			transition: all 0.5s;
 		}
-
-
 
 		.thumb:hover a {
-		    transform: rotateX(80deg);
-		    transform-origin: bottom;
+			transform: rotateX(80deg);
+			transform-origin: bottom;
 		}
 		.thumb a:after {
-		    content: '';
-		    position: absolute;
-		    left: 0;
-		    bottom: 0;
-		    width: 100%;
-		    height: 36px;
-		    background: inherit;
-		    background-size: cover, cover;
-		    background-position: bottom;
-		    transform: rotateX(90deg);
-		    transform-origin: bottom;
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 36px;
+			background: inherit;
+			background-size: cover, cover;
+			background-position: bottom;
+			transform: rotateX(90deg);
+			transform-origin: bottom;
 		}
 		.thumb a span {
-		    color: $white;
-		    background: $turquoise;
-		    text-transform: uppercase;
-		    position: absolute;
-		    top: 100%;
-		    left: 0;
-		    width: 100%;
-		    font-family: 'Poppins', sans-serif;
-		    text-align: center;
-		    transform: rotateX(-89.99deg);
-		    transform-origin: top;
-		    z-index: 1;
+			color: $white;
+			background: $turquoise;
+			text-transform: uppercase;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			font-family: "Poppins", sans-serif;
+			text-align: center;
+			transform: rotateX(-89.99deg);
+			transform-origin: top;
+			z-index: 1;
 		}
 		.thumb a:before {
-		    content: '';
-		    position: absolute;
-		    top: -20px;
-		    left: 0;
-		    width: 100%;
-		    height: 100%;
-		    background: rgba(0, 0, 0, 0.5);
-		    box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
-		    transition: all 0.5s;
-		    opacity: 0.15;
-		    transform: rotateX(95deg) translateZ(-80px) scale(0.75);
-		    transform-origin: bottom;
+			content: "";
+			position: absolute;
+			top: -20px;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+			transition: all 0.5s;
+			opacity: 0.15;
+			transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+			transform-origin: bottom;
 		}
 
 		.thumb:hover a:before {
-		    opacity: 1;
-		    box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
-		    transform: rotateX(0) translateZ(-60px) scale(0.85);
+			opacity: 1;
+			box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+			transform: rotateX(0) translateZ(-60px) scale(0.85);
 		}
 	}
 
@@ -434,7 +439,7 @@ body {
 		.index-about-name {
 			color: #fff;
 			font-size: 2rem;
-			font-family: 'Poppins', sans-serif;
+			font-family: "Poppins", sans-serif;
 			position: absolute;
 			transform-origin: bottom right;
 			transform: rotate(-12deg);
@@ -453,9 +458,8 @@ body {
 			}
 		}
 
-
 		color: $blue;
-		font-family: 'Poppins', sans-serif;
+		font-family: "Poppins", sans-serif;
 
 		.image-shelly {
 			background-image: url(../img/shelly.jpg);
@@ -465,8 +469,8 @@ body {
 			width: 100%;
 			height: 30vh;
 			margin-bottom: 10vh;
-		    margin-top: 14vh;
-			box-shadow: 0px 2px 33px 10px rgba(204,204,204,1);
+			margin-top: 14vh;
+			box-shadow: 0px 2px 33px 10px rgba(204, 204, 204, 1);
 		}
 
 		h1 {
@@ -495,7 +499,7 @@ body {
 		.index-contact-name {
 			color: #fff;
 			font-size: 2rem;
-			font-family: 'Poppins', sans-serif;
+			font-family: "Poppins", sans-serif;
 			position: absolute;
 			transform-origin: bottom right;
 			transform: rotate(-12deg);
@@ -515,10 +519,3 @@ body {
 		}
 	}
 }
-
-
-
-
-
-
-
